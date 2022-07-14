@@ -1,0 +1,63 @@
+{
+  "name": "site-to-rss",
+  "version": "1.0.0",
+  "description": "Site to Rss API module and examples",
+  "types": "lib/index.d.ts",
+  "keywords": [
+    "RSS",
+    "RSS.app",
+    "rss generator",
+    "feed",
+    "rss api",
+    "api",
+    "node rss",
+    "twitter rss",
+    "google news rss",
+    "rssapp",
+    "site",
+    "node",
+    "javascript",
+    "typescript",
+    "JS"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "tsc",
+    "format": "prettier --write \"src/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RSSapp/site-to-rss.git"
+  },
+  "author": "RSS.app",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RSSapp/site-to-rss/issues"
+  },
+  "homepage": "https://rss.app/docs/api/",
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "@types/node": "^18.0.1",
+    "dotenv": "^16.0.1",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.5",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.7.4"
+  },
+  "files": [
+    "lib/**/*",
+    "runkit-example.js"
+  ],
+  "dependencies": {
+    "cross-fetch": "^3.1.5"
+  },
+  "runkitExampleFilename": "runkit-example.js"
+}
